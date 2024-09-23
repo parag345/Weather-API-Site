@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);;
+}
+
+.bg-effect{
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 4px;
+}
+
+.tabs{
+    padding: 5px 8px;
+}
+
+.weather{
+    margin-block: 4rem;
+}
+
+.commonClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button[grantAccessBtn]{
+    all:unset;
+    background-color: var(--colorDark2);
+    padding: 10px 30px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    
+}
+
+
+
+.city_and_flag{
+    gap:0 0.5rem;
+}
+
+img[CountryFlag]{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+.weatherCards{
+    gap:10px 20px;
+    width: 550px;
+}
+
+.individual-card{
+    width: 30%;
+    background-color: rgba(219,226,239,0.5);
+    gap:5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grant-location{
+    display: none;
+}
+
+.search-weather{
+
+    display: none;
+    margin: 0 auto;
+    gap: 0 10px;
+    flex-direction: row;
+    max-width: 550px;
+    width: 90%;
+    /* margin-bottom: 3rem; */
+    /* flex flex-row max-w-[550px] w-[90%] mb-[3rem] */
+    
+}
+
+.location-weather{
+    display: none;
+}
+
+.load{
+    display: none;
+}
+
+.error-handle{
+    display: none;
+}
+
+.active{
+    display: flex;
+}
+
+input{
+    all:unset;
+   width:502px;
+    padding: 0 20px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 10px;
+
+}
+
+input:focus{
+    outline: 3px solid rgba(255,255,255,0.7);
+}
+
+input[city]::placeholder{
+    color: rgba(255,255,255,0.7);
+    /* padding: 0 20px; */
+}
+
+button[searchBtn]{
+     padding:0;
+     width: 40px;
+     height: 40px;
+     margin-bottom: 1px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--colorDark2);
+     border: none; 
+     outline: none; 
+     cursor: pointer;
+}
+
+@media (max-width : 700px) {
+    
+  .wrapper{
+
+    overflow-y: auto;
+  }
+
+  .weatherCards{
+    /* width: 100%;  */
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width :525px){
+   .search-weather input{
+    width: calc(100% - 55px);
+   }
+}

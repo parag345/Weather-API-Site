@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <div class="wrapper h-[100vh] w-[100vw] flex flex-col items-center overflow-hidden">
+        <h1 class="pt-[20px] text-center uppercase font-bold text-[2rem]">Weather App</h1>
+
+        <div class="WeatherTabs  w-[90%] max-w-[550px] flex justify-between mt-[4rem]" >
+            <p user-tab class="text-[0.875rem] tracking-[1.75px] tabs cursor-pointer">Your Weather</p>
+            <p search-weather-tab class="text-[0.875rem] tracking-[1.75px] tabs cursor-pointer" >Search Weather</p>
+        </div>
+
+        <div class="weather">
+            <div class="grant-location commonClass ">
+
+                <img src="./assets/location.png" alt="" height="80px" width="80px" class="mb-[2rem]">
+                <h1 class="text-[1.75rem] font-semibold">Grant Location Access</h1>
+                <p class="text-[0.85rem] font-medium mt-[0.75rem] mb-[1.75rem] tracking-[0.75px]">Allow Access To Get Weather Information</p>
+    
+                <button grantAccessBtn >GRANT ACCESS</button>
+    
+            </div>
+    
+            
+    
+            <!-- Search weather by location -->
+    
+            <form class="search-weather commonClass ">
+    
+                <input type="text" placeholder="Search for city..." city class="h-[40px] rounded-[10px]">
+                <button type="submit" searchBtn><img src="./assets/search.png" alt="" height="20px" width="20px"></button>
+            </form>
+    
+    
+            <!-- loading section -->
+    
+            <div class="load commonClass ">
+    
+                <img src="./assets/loading.gif" alt="" height="150px" width="150px">
+                <p class="uppercase">Loading</p>
+    
+            </div>
+    
+            <!-- User location -->
+    
+          <div class="location-weather commonClass ">
+              
+            <div class="city_and_flag mb-[1rem] flex justify-center items-center">
+    
+            <p Location class="text-[2rem]"></p>
+            <img src="" alt="" CountryFlag>
+    
+            </div>
+    
+            <p atmosphere class="text-[1.5rem] font-extralight"></p>
+            <img src="" alt="" atmpImg class="w-[90px] h-[90px]">
+             
+            <div class="tempdiv flex">
+                <p temperature class="text-[2.7rem] font-bold"></p>
+                <p class="text-[2.7rem] font-bold">℃</p>
+            </div>
+           
+    
+            <div class="flex flex-row weatherCards mt-[2rem] justify-center items-center">
+    
+                <div class="wind individual-card w-[30%] m-w-[200px] rounded-[5px] p-[1rem]">
+    
+                  <img src="./assets/wind.png" alt="" height="50px" width="50px">
+                  <p class="text-[1.15rem] font-semibold">windspeed</p>
+                  <p wSpeed class="text-[1rem] font-extralight"></p>
+    
+                </div>
+    
+    
+                <div class="humidity individual-card w-[30%] m-w-[200px] rounded-[5px] p-[1rem]">
+    
+                    <img src="./assets/humidity.png" alt="" height="50px" width="50px">
+                    <p class="text-[1.15rem] font-semibold">humidity</p>
+                    <p humid class="text-[1rem] font-extralight"></p>
+    
+                </div>
+    
+                <div class="clouds individual-card w-[30%] m-w-[200px] rounded-[5px] p-[1rem]">
+    
+                    <img src="./assets/cloud.png" alt="" height="50px" width="50px">
+                    <p class="text-[1.15rem] font-semibold">clouds</p>
+                    <p cloudPer class="text-[1rem] font-extralight"></p>
+    
+                </div>
+    
+    
+            </div>
+    
+    
+            
+    
+    
+          </div>
+
+          <div class="error-handle commonClass">
+
+            <img src="./assets/not-found.png" alt="" height="200px" width="200px">
+            <p>City Not Found</p>
+
+          </div>
+
+        </div>
+
+
+        
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
